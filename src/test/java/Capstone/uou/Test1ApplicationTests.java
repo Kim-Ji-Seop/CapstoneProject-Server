@@ -1,4 +1,4 @@
-package Capstone.test1;
+package Capstone.uou;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
