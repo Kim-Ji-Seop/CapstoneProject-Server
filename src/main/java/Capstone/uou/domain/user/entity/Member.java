@@ -3,10 +3,7 @@ package Capstone.uou.domain.user.entity;
 import Capstone.uou.config.BaseEntity;
 import Capstone.uou.domain.history.entity.History;
 import Capstone.uou.domain.match.entity.MatchRoom;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.ColumnDefault;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -15,8 +12,10 @@ import java.util.List;
 
 @Entity
 @Getter
-@NoArgsConstructor
-public class User extends BaseEntity {
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class Member extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long id;

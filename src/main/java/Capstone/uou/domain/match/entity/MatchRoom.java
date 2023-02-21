@@ -2,10 +2,9 @@ package Capstone.uou.domain.match.entity;
 
 import Capstone.uou.config.BaseEntity;
 import Capstone.uou.domain.history.entity.History;
-import Capstone.uou.domain.user.entity.User;
+import Capstone.uou.domain.user.entity.Member;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -29,7 +28,7 @@ public class MatchRoom extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User userIdx;
+    private Member memberIdx;
 
     private LocalDateTime gameTime; // 예정시간
 
